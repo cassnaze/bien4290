@@ -3,10 +3,10 @@
  * This file is where the main function is and values and printed to the screen.
 */
 
-#includes "nazec_stats.hpp"
+#include "nazec_stats.hpp"
 
 /* This is the main function where all of the statistics are calculated and printed to the screen
- * @param
+ * @param data: Input path for the data file
  * @return:
  */
 
