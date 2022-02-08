@@ -3,18 +3,25 @@
  * This file declares the function for the correlation program.
 */
 
-#ifndef CORR
-#define CORR
+#ifndef ABC
+#define ABC
 
+//extern "C"
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+//#include <ostream>
 #include <fstream>
 #include <vector>
 #include <math.h>
+#include <string>
+
 
 namespace BigCass{
-    class Correlation{
+    class correlation{
+
+        //correlation::correlation();
+
         public: 
 
         /* This function takes in two data sets and calculates the correlation coefficient between them

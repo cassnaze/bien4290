@@ -3,8 +3,8 @@
  * This file declares the functions for statistical analysis.
 */
 
-#ifndef STATY
-#define STATY
+#ifndef STATBOI
+#define STATBOI
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,7 +14,7 @@
 #include <math.h>
 
 namespace BigCass{
-    class Statistics{
+    class statistics{
         public: 
             //Statistics(); // Constructor.. do we need this?f
 

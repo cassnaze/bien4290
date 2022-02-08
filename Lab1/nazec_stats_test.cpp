@@ -10,6 +10,12 @@
  * @return:
  */
 
-int main(){
+int main(int argc, char* argv[]){
+    
+    // Ensure all data points are read correctly
 
+
+    // If the data isn't found, then print an eror to the screen and terminate analysis
+
+    // Calculate and write the quantities to the screen
 }

@@ -7,7 +7,7 @@
 #include "nazec_stats.hpp"
 
 
-float BigCass::Statistics::calcMin(std::vector<float>* data, int size){
+float BigCass::statistics::calcMin(std::vector<float>* data, int size){
     float littlest = 5000; 
     for(int i = 0; i < size; i++){
         if(littlest > (*data)[i]){
@@ -16,12 +16,12 @@ float BigCass::Statistics::calcMin(std::vector<float>* data, int size){
     }
     return littlest;
 }
-void BigCass::Statistics::setMin(float value){
+void BigCass::statistics::setMin(float value){
     this->min = value;
 }
 
 
-float BigCass::Statistics::calcMax(std::vector<float>* data, int size){
+float BigCass::statistics::calcMax(std::vector<float>* data, int size){
     float biggest = 0;
     for(int i = 0; i < size; i++){
         if((*data)[i] > biggest){
@@ -30,12 +30,12 @@ float BigCass::Statistics::calcMax(std::vector<float>* data, int size){
     }
     return biggest; 
 }
-void BigCass::Statistics::setMax(float value){
+void BigCass::statistics::setMax(float value){
     this->max = value;
 }
 
 
-float BigCass::Statistics::calcMean(std::vector<float>* data, int size){
+float BigCass::statistics::calcMean(std::vector<float>* data, int size){
     float average; 
     float sum = 0;
 
@@ -46,12 +46,12 @@ float BigCass::Statistics::calcMean(std::vector<float>* data, int size){
 
     return average; 
 }
-void BigCass::Statistics::setMean(float value){
+void BigCass::statistics::setMean(float value){
     this->mean = value;
 }
 
 
-float BigCass::Statistics::calcStdDev(std::vector<float>* data, int size, float mean){
+float BigCass::statistics::calcStdDev(std::vector<float>* data, int size, float mean){
     float variance;
     float theStandard;
     float sum = 0;
@@ -65,11 +65,11 @@ float BigCass::Statistics::calcStdDev(std::vector<float>* data, int size, float 
 
     return theStandard;
 }
-void BigCass::Statistics::setStdDev(float value){
+void BigCass::statistics::setStdDev(float value){
     this->std = value;
 }
 
 
-std::vector<float> BigCass::Statistics::histogram(std::vector<float>* data, int size, float mean, float std){
+std::vector<float> BigCass::statistics::histogram(std::vector<float>* data, int size, float mean, float std){
 
 }
