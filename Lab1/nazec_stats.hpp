@@ -6,12 +6,12 @@
 #ifndef STATBOI
 #define STATBOI
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <vector>
+#include <cstdio>
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include <math.h>
+#include <string>
 
 namespace BigCass{
     class statistics{
@@ -60,7 +60,7 @@ namespace BigCass{
             * return hashbin, assign classvariables (vector or array that is the same length of elemetns in the bins) to get values in bins, calcualte bins externally to the 
             * histogram and histogram function takes in the bin values
             */ 
-            std::vector<float> histogram(std::vector<float>* data, int size, float mean, float std); 
+            //std::vector<float> histogram(std::vector<float>* data, int size, float mean, float std); 
 
         private: 
             //float data[]; // allocate it with something in the constructor; could look at std vectors 

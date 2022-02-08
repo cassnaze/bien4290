@@ -5,6 +5,7 @@
 
 #include "nazec_stats.hpp"
 #include "nazec_corr.hpp"
+#include "nazec_stats.cpp"
 
 using namespace BigCass;
 
@@ -34,7 +35,7 @@ float BigCass::correlation::calcCorrCoef(std::vector<float>* data1, std::vector<
     }
 
     // Calculations for numerator and denominator
-    numerator = sum - (size * xMean * yMean);
+    numerator = (xSum * ySum) - (size * xMean * yMean);
     denominator = pow((xSq - (size * pow(xMean, 2.0))) * (ySq - (size * pow(yMean, 2.0))), 0.5);
 
     corrCoeff = numerator / denominator; 

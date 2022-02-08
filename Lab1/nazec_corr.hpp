@@ -7,14 +7,15 @@
 #define ABC
 
 //extern "C"
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+//#include <stdlib.h>
 #include <iostream>
 //#include <ostream>
 #include <fstream>
 #include <vector>
 #include <math.h>
 #include <string>
+#include <filesystem>
 
 
 namespace BigCass{

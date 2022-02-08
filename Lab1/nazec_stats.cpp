@@ -5,7 +5,7 @@
 */
 
 #include "nazec_stats.hpp"
-
+using namespace BigCass;
 
 float BigCass::statistics::calcMin(std::vector<float>* data, int size){
     float littlest = 5000; 
@@ -70,6 +70,6 @@ void BigCass::statistics::setStdDev(float value){
 }
 
 
-std::vector<float> BigCass::statistics::histogram(std::vector<float>* data, int size, float mean, float std){
-
-}
+//std::vector<float> BigCass::statistics::histogram(std::vector<float>* data, int size, float mean, float std){
+//    return 0;
+//}
