@@ -31,8 +31,7 @@ int main(int argc, char** argv){
     int size = 0; // The number of points in the data file
 
     std::vector<float> data;
-    std::string dataString;
-    dataString = argv[1]; // argv[0] is the .exe file name
+    std::string dataString = argv[1]; // argv[0] is the .exe file name
 
     // Ensure all data points are read correctly
     // If the data isn't found, then print an eror to the screen and terminate analysis
@@ -55,10 +54,35 @@ int main(int argc, char** argv){
     float max = statyFunctions.calcMax(&data, size);
     float min = statyFunctions.calcMin(&data, size);
     float std = statyFunctions.calcStdDev(&data, size, mean);
+    std::vector <float> histo = statyFunctions.histogram(&data, size, mean, std);
 
     std::cout << "Number of data points: " << size << std::endl;
     std::cout << "Mean: " << mean << std::endl;
     std::cout << "Maximum: " << max << std::endl;
     std::cout << "Minimum: " << min << std::endl;
     std::cout << "Standard Deviation: " << std << std::endl;
+
+    // Histogram output
+    for(int i = 0; i<10;i++){
+        std::cout <<"I ";
+        for(int j = 0; j<histo[i];j++){
+            //std::cout << std::endl;
+            std::cout << "*";
+        }
+        std::cout << " " << ceil(histo[i])<< std::endl;
+        //std::cout << std::endl;
+    }
+    std::cout << "Each * counts for 10 data points" << std::endl;
+
+/*  // Tried to use this code from online to print it vertically rather than horizontal but the logic doesnt make sense
+    for (int value : histo) std::cout << ' ' << value;
+    std::cout << std::endl;
+    max = 0;
+    for (int value : histo) if (max < value) max = value;
+    for (; max > 0; --max) {
+        for (int value : histo) std::cout << (value >= max ? " *" : "  ");
+        std::cout << std::endl;
+  }
+*/
+
 }

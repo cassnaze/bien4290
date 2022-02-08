@@ -93,8 +93,8 @@ int main(int argc, char** argv){
     }
 
     // Write quantity to the screen        
-    std::cout <<"Size of data vector 1 is " << size1 << std::endl;
-    std::cout << "Size of data vector 2 is " << size2 << std::endl;
+    std::cout <<"Number of points in vector1: " << size1 << std::endl;
+    std::cout << "Number of points in vector2: " << size2 << std::endl;
 
     std::cout << "Correlation coefficient: " << corrCoeff << std::endl;
 }
