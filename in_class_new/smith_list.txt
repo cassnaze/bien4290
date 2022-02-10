@@ -1,0 +1,11 @@
+total 20
+-rw------- 1 nazec nazec    0 Feb  7 12:05 agent_smith
+drwxrwxr-x 2 nazec nazec 4096 Jan 26 10:50 Cave
+-rw-rw-r-- 1 nazec nazec  139 Jan 26 10:50 cnaze_basicbash.sh
+-rw-rw-r-- 1 nazec nazec  409 Feb  7 12:05 cnaze_basicio.sh
+drwxrwxr-x 2 nazec nazec 4096 Jan 31 10:49 cpp_primer
+lrwxrwxrwx 1 nazec nazec   11 Feb  7 10:41 me -> agent_smith
+lrwxrwxrwx 1 nazec nazec   11 Feb  7 10:41 me_me -> agent_smith
+lrwxrwxrwx 1 nazec nazec   11 Feb  7 10:41 me_too -> agent_smith
+-rw-rw-r-- 1 nazec nazec    0 Feb  7 12:05 smith_list.txt
+drwxrwxr-x 2 nazec nazec 4096 Jan 26 10:50 Whoville
