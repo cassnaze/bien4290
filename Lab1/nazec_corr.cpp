@@ -5,7 +5,7 @@
 
 #include "nazec_stats.hpp"
 #include "nazec_corr.hpp"
-#include "nazec_stats.cpp"
+//#include "nazec_stats.cpp"
 
 using namespace BigCass;
 

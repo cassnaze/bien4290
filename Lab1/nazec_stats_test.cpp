@@ -4,7 +4,7 @@
 */
 
 #include "nazec_stats.hpp"
-#include "nazec_stats.cpp"
+//#include "nazec_stats.cpp"
 #include <cstdio>
 #include <iostream>
 #include <fstream>

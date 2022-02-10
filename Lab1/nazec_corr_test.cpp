@@ -5,7 +5,7 @@
 
 #include "nazec_corr.hpp"
 #include "nazec_stats.hpp"
-#include "nazec_corr.cpp"
+//#include "nazec_corr.cpp"
 #include <experimental/filesystem>
 
 using namespace BigCass;
@@ -18,7 +18,7 @@ using namespace BigCass;
 
 int main(int argc, char** argv){
     
-    std:: cout << "She's running" << std::endl;
+    //std:: cout << "She's running" << std::endl;
 
     // Check number of arguments that the function is taking in first
     if(argc > 3 || argc < 3){
@@ -93,8 +93,8 @@ int main(int argc, char** argv){
     }
 
     // Write quantity to the screen        
-    std::cout <<"Number of points in vector1: " << size1 << std::endl;
-    std::cout << "Number of points in vector2: " << size2 << std::endl;
+    //std::cout <<"Number of points in vector1: " << size1 << std::endl;
+    //std::cout << "Number of points in vector2: " << size2 << std::endl;
 
-    std::cout << "Correlation coefficient: " << corrCoeff << std::endl;
+    std::cout << corrCoeff << std::endl;
 }
