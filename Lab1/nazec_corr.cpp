@@ -26,17 +26,22 @@ float BigCass::correlation::calcCorrCoef(std::vector<float>* data1, std::vector<
 
     // Increment through the data vectors to find the sums and stuff
     for(int i = 0; i < size; i++){
-        xSum = xSum + (*data1)[i];
-        ySum = ySum + (*data2)[i];
-        sum = xSum + ySum; 
+        float X = (*data1)[i];
+        float Y = (*data2)[i];
+        xSum = xSum + X;
+        ySum = ySum + X;
+        sum = sum + (X * Y);
+        //sum = xSum + ySum;
 
-        xSq = pow(xSum, 2.0);
-        ySq = pow(ySum, 2.0);
+        //xSq = xSq + (*data1)[i] * (*data1)[i];
+        //ySq = ySq + (*data2)[i] * (*data2)[i];
+        xSq = xSq + pow(X,2.0);
+        ySq = ySq + pow(Y,2.0);
     }
 
     // Calculations for numerator and denominator
-    numerator = (xSum * ySum) - (size * xMean * yMean);
-    denominator = pow((xSq - (size * pow(xMean, 2.0))) * (ySq - (size * pow(yMean, 2.0))), 0.5);
+    numerator = (sum) - (size * xMean * yMean);
+    denominator = sqrt((xSq - (size * xMean * xMean)) * (ySq - (size * yMean * yMean)));
 
     corrCoeff = numerator / denominator; 
 

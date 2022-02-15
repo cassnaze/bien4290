@@ -33,6 +33,7 @@ then
         for i in {1..59}
         do
             # echo ERP${level}${i}.txt
+            echo -n "${i}vs$((i+1)), " >> conc_corr_${level}.csv
             ./corry "/home/nazec/bien4290/Lab1/EEG_DATA/ERP${level}/ERP${level}${i}.txt" "/home/nazec/bien4290/Lab1/EEG_DATA/ERP${level}/ERP${level}$((i+1)).txt" >> /home/nazec/bien4290/Lab1/conc_corr_${level}.csv
             # printf '%s\n' {1..59} | paste -sd ',' >> conc_corr_${level}.csv
         done

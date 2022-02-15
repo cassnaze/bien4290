@@ -8,9 +8,17 @@ echo "What concentration level do you want to analyze? (00 or 05)"
 read level
 echo "Chosen concentration is ${level}"
 
+
 # Check for a valid file name
 if [ ${level} == '00' ] || [ ${level} == '05' ]
 then
+    
+    # Error check
+    if [ "/home/nazec/bien4290/Lab1/EEG_DATA/histo_${level}.txt" ]
+    then
+        echo "Deleting the already existing file with that concentration"
+        rm -r "/home/nazec/bien4290/Lab1/EEG_DATA/histo_${level}.txt"
+    fi 
 
     # Concatenate all data from the chosen contration into new file in EEG_DATA 
     touch concatData.txt

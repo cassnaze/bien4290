@@ -63,16 +63,16 @@ int main(int argc, char** argv){
     std::cout << "Standard Deviation: " << std << std::endl;
 
     // Histogram output
-    for(int i = 0; i<10;i++){
+    for(int i = 0; i<15;i++){
         std::cout <<"I ";
         for(int j = 0; j<histo[i];j++){
             //std::cout << std::endl;
             std::cout << "*";
         }
-        std::cout << " " << ceil(histo[i])<< std::endl;
-        //std::cout << std::endl;
+        //std::cout << " " << ceil(histo[i])<< std::endl; // to print the number of values in each bin
+        std::cout << std::endl;
     }
-    std::cout << "Each * counts for 10 data points" << std::endl;
+    std::cout << "Each * represents 50 data points" << std::endl;
 
 /*  // Tried to use this code from online to print it vertically rather than horizontal but the logic doesnt make sense
     for (int value : histo) std::cout << ' ' << value;

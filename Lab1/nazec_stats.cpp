@@ -2,6 +2,7 @@
  * Created: 1 February 2022
  * This file calculates statistical data including min/max, mean, standard deviation and histogram values.
  * Using comp apps lab 1 code for reference here
+ * Worked through histogram logic with Gabbie and Kelsey
 */
 
 #include "nazec_stats.hpp"
@@ -101,53 +102,66 @@ std::vector<float> BigCass::statistics::histogram(std::vector<float>* data, int 
     }
 */
 
-    for(int i = 0; i<10; i++){
+    for(int i = 0; i < 15; i++){
         bin_count.push_back(0);
     }
 
-	for(int j=0; j<size;j++) {
-
-		if (((*data)[j] > begin) && ((*data)[j] <= (width+begin))) {
+	for(int i = 0; i < size; i++) {
+        float dat = (*data)[i];
+		if ((dat > begin) && (dat <= (width+begin))) {
 			bin_count[0]++; 
 		}
-		else if (((*data)[j] > ((width*1) + begin)) && ((*data)[j] <= ((width*2)+begin)))	{
+		else if ((dat > ((width*1) + begin)) && (dat <= ((width*2)+begin)))	{
 			bin_count[1]++; 
 		}
-	        else if (((*data)[j] > ((width*2) + begin)) && ((*data)[j] <= ((width*3) + begin))){
+	    else if ((dat > ((width*2) + begin)) && (dat <= ((width*3) + begin))){
 			bin_count[2]++;  
 		}
-		else if (((*data)[j] > ((width*3) + begin)) && ((*data)[j] <= ((width*4) + begin))){
+		else if ((dat > ((width*3) + begin)) && (dat <= ((width*4) + begin))){
 			bin_count[3]++; 
 		}
-        else if (((*data)[j] > ((width*4) + begin)) && ((*data)[j] <= ((width*5) + begin))){
+        else if ((dat > ((width*4) + begin)) && (dat <= ((width*5) + begin))){
             bin_count[4]++; 
         }
-        else if (((*data)[j] > ((width*5) + begin)) && ((*data)[j] <= ((width*6) + begin))){
+        else if ((dat > ((width*5) + begin)) && (dat <= ((width*6) + begin))){
             bin_count[5]++; 
         }
-        else if (((*data)[j] > ((width*6) + begin)) && ((*data)[j] <= ((width*7) + begin))){
+        else if ((dat > ((width*6) + begin)) && (dat <= ((width*7) + begin))){
             bin_count[6]++; 
         }
-        else if (((*data)[j] > ((width*7) + begin)) && ((*data)[j] <= ((width*8) + begin))){
+        else if ((dat > ((width*7) + begin)) && (dat <= ((width*8) + begin))){
             bin_count[7]++; 
         }
-        else if (((*data)[j] > ((width*8) + begin)) && ((*data)[j] <= ((width*9) + begin))){
+        else if ((dat > ((width*8) + begin)) && (dat <= ((width*9) + begin))){
             bin_count[8]++; 
         }
-        else if (((*data)[j] > ((width*9) + begin)) && ((*data)[j] <= ((width*10) + begin))){
+        else if ((dat > ((width*9) + begin)) && (dat <= ((width*10) + begin))){
             bin_count[9]++; 
         }
-        else if (((*data)[j] > ((width*10) + begin)) && ((*data)[j] <= end)){
+        else if ((dat > ((width*10) + begin)) && (dat <= ((width*11) + begin))){
             bin_count[10]++; 
+        }
+        else if ((dat > ((width*11) + begin)) && (dat <= ((width*12) + begin))){
+            bin_count[11]++; 
+        }
+        else if ((dat > ((width*12) + begin)) && (dat <= ((width*13) + begin))){
+            bin_count[12]++; 
+        }
+        else if ((dat > ((width*13) + begin)) && (dat <= ((width*14) + begin))){
+            bin_count[13]++; 
+        }
+        else if ((dat > ((width*14) + begin)) && (dat <= ((width*15) + begin))){
+            bin_count[14]++; 
+        }
+        else if ((dat > ((width*15) + begin)) && (dat <= end)){
+            bin_count[15]++; 
         }
 	}
 
-    // Setting each * in the output to be equal to 5 values
-	for(int count = 0; count <10; count++)
-	{
-		bin_count[count] = bin_count[count]/10.0;
+    // Setting each * in the output to be equal to 50 values
+	for(int i = 0; i < 15; i++){
+		bin_count[i] = bin_count[i]/50.0;
 	}
 
-    
     return bin_count;
 }
