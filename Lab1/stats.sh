@@ -42,6 +42,6 @@ then
     find $PWD -type f | grep "histo_${level}.txt" 
 
 else
-    echo "That was not a valid choice..you suck!"
+    echo "That was not a valid choice!"
     exit 1
 fi

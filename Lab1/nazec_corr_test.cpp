@@ -11,11 +11,6 @@
 using namespace BigCass;
 //using namespace std;
 
-/* This is the main function where all of the statistics are calculated and printed to the screen
- * @param data1: Input path for the first data file
- * @param data2: Input path for the second data file
- */ 
-
 int main(int argc, char** argv){
     
     //std:: cout << "She's running" << std::endl;
@@ -69,7 +64,7 @@ int main(int argc, char** argv){
         }    
     }
     else{
-        std:: cout << "Data file 1 don't exist" << std::endl;
+        std:: cout << "Data file 1 doesn't exist." << std::endl;
         return 1; 
     }
 
@@ -80,7 +75,7 @@ int main(int argc, char** argv){
         }
     }
     else{
-        std:: cout << "Data file 2 don't exist." << std::endl;
+        std:: cout << "Data file 2 doesn't exist." << std::endl;
         return 1; 
     }
         

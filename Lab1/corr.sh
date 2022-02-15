@@ -53,6 +53,6 @@ then
     # Label and the value should be separate columns
 
 else
-    echo "That was not a valid choice..you suck!"
+    echo "That was not a valid choice!"
     exit 1
 fi
