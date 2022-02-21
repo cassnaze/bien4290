@@ -7,12 +7,15 @@
 #ifndef HELLO
 #define HELLO
 
+#include "nazec_stats.hpp"
+
 #include <cstdio>
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <math.h>
 #include <string>
+#include <stdlib.h>
 
 namespace BigCass{
     class PreProcessing{
@@ -25,7 +28,7 @@ namespace BigCass{
              * @param ratio: The vector that is filled with the log ratio data
              * @return: Void
              */
-            void logRatio(std::vector<float>* data1, int size1, std::vector<float>* data2, int size2, std::vector<float> lr);
+            void logRatio(std::vector<float>* data1, int size1, std::vector<float>* data2, int size2, std::vector<float>* lr);
 
             /* This is the setter function for the private variable
              * @param ratio: The private variable
