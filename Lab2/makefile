@@ -3,11 +3,18 @@
 # Compiler command to use
 CC = g++
 
+# The .o is what compiles
 nazec_stats.o: nazec_stats.cpp nazec_stats.hpp
 	$(CC) -c $^
 nazec_vector_ops.o: nazec_vector_ops.cpp nazec_vector_ops.hpp
 	$(CC) -c $^
-nazec_pre_processing.o: nazec_pre_processing.cpp nazec_pre_processing.hpp nazec_vector_ops.cpp nazec_vector_ops.hpp nazec_stats.cpp nazec_stats.hpp
-	$(CC) -c $^
+nazec_pre_processing.o: nazec_pre_processing.cpp nazec_pre_processing.hpp nazec_vector_ops.o nazec_stats.o
+	$(CC) -o $@ $^
 
-machine: nazec_pre_processing.o nazec_stats.o nazec_vector_ops.o
+# Run all of the things that we just did above
+# The executable will be the nazec_pre_processing.o in the folder
+all: nazec_pre_processing.o nazec_stats.o nazec_vector_ops.o
+
+clean:
+	rm -f *.o
+	rm -f *.gch
