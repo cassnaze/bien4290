@@ -11,6 +11,10 @@ nazec_vector_ops.o: nazec_vector_ops.cpp nazec_vector_ops.hpp
 nazec_pre_processing.o: nazec_pre_processing.cpp nazec_pre_processing.hpp nazec_vector_ops.o nazec_stats.o
 	$(CC) -o $@ $^
 
+# Add a line here to run the k_means files; do we need to add the pre processing file here because they both have mains?
+# nazec_k_means.o: nazec_stats.o nazec_k_means.hpp nazec_k_means.cpp
+#	$(CC) -o $@ $^
+
 # Run all of the things that we just did above
 # The executable will be the nazec_pre_processing.o in the folder
 all: nazec_pre_processing.o nazec_stats.o nazec_vector_ops.o

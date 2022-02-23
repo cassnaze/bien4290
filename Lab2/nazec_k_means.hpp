@@ -6,7 +6,8 @@
 #ifndef CLUSTY
 #define CLUSTY
 
-#include "nazec_pre_processing.hpp"
+//#include "nazec_pre_processing.hpp"
+#include "nazec_stats.hpp"
 #include <cstdio>
 #include <iostream>
 #include <fstream>
@@ -19,22 +20,30 @@
 namespace BigCass{
     class Cluster{
         public:
-            /* This is the setter function for all of the privata variables.
+            /* This is the setter function for object name.
              * @param objectName: The name of the cluster.
-             * @param objectMean: The mean of the cluster.
-             * @param clusterDataPoints: The vector of data points in the cluster.
              */
-            void setter(std::string objectName, float objectMean, std::vector<float> clusterDataPoints);
+            void setObjName(std::string objectName);
             
             /* This is the getter function for the object name variable.
              * @returns: The string with the cluster name.
              */
             std::string getObjName();
+
+            /* This is the setter function for the mean.
+             * @param objectMean: The mean of the cluster.
+             */
+            void setMean(float objectMean);
             
             /* This is the setter function for the object mean variable.
              * @returns: The variable with the cluster mean.
              */
             float getMean();
+
+            /* This is the setter function for the cluster data.
+             * @param clusterDataPoints: The vector of data points in the cluster.
+             */
+            void setClusterData(std::vector<float> clusterData);
         
             /* This is the setter function for the cluster data vector.
              * @returns: The vector with the cluster data points.
