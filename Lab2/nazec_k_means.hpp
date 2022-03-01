@@ -7,12 +7,13 @@
 #define CLUSTY
 
 //#include "nazec_pre_processing.hpp"
-#include "nazec_stats.hpp"
+//#include "nazec_stats.hpp"
 #include <cstdio>
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <math.h>
+#include <string.h>
 #include <string>
 #include <stdlib.h>
 
@@ -48,7 +49,7 @@ namespace BigCass{
             /* This is the setter function for the cluster data vector.
              * @returns: The vector with the cluster data points.
              */
-            std::vector<float> getClusterData();
+            std::vector<float>* getClusterData();
 
             /* This function calculates the distance from the data point to the cluster object.
              * @param datapoint: The input data point
