@@ -192,8 +192,6 @@ int main(int argc, char** argv){
     
     // We do checking at the beginning to make sure the input data and gene file is open
     for(int i = 0; i < supSize; i++){
-        //fgets(gene_string, 6118, fp); // this did not work properly
-        //geneFile >> gene_string; // pushes the names of the genes to the string
         if(outstreamSup.is_open() && outstreamStat.is_open() && outstreamExp.is_open()){
             if(vector.at(i) < statMin){ // above stationary min is
 				outstreamSup << lines[i] << " " << vector.at(i) << std::endl;
