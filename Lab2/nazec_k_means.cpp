@@ -82,19 +82,19 @@ int main(int argc, char** argv){
         return 1; 
     }
     std::cout << "size is : " << vector.size() << std::endl;
-/*
+
     if(geneFile.is_open()){
         /*while(std::getline(geneStream,genePlaceholder)){
             geneVector.push_back(genePlaceholder);
             geneListSize++;
-        }
-        std::cout << "Opening gene list" << std::endl;
+        }*/
+        //std::cout << "Opening gene list" << std::endl;
     }
     else{
         std::cout << "That gene list file does not exist or cannot be opened." << std::endl;
         return 1; 
     }
-*/
+
 
 
     // Initialize three different clusters with this initial means
@@ -188,20 +188,28 @@ int main(int argc, char** argv){
         lines.push_back(line);
     }
     
-    std::cout << supSize << std::endl;
+    std::cout << "Number of suppressed genes: " << supSize << std::endl;
+    std::cout << "Number of stationary genes: " << statSize << std::endl;
+    std::cout << "Number of expressed genes: " << expSize << std::endl;
+    //int newSize = supSize + statSize + expSize;
+    //std::cout << "size is " << newSize << std::endl;
     
     // We do checking at the beginning to make sure the input data and gene file is open
-    for(int i = 0; i < supSize; i++){
+    for(int i = 0; i < size; i++){
         if(outstreamSup.is_open() && outstreamStat.is_open() && outstreamExp.is_open()){
-            if(vector.at(i) < statMin){ // above stationary min is
+            if(vector.at(i) <= statMin){
 				outstreamSup << lines[i] << " " << vector.at(i) << std::endl;
 			}
-			else if(vector.at(i) > statMax){
+			else if(vector.at(i) >= statMax){
 				outstreamExp << lines[i] << " " << vector.at(i) << std::endl;
 			}
 			else{
 				outstreamStat << lines[i] << " " << vector.at(i) << std::endl;
 			}
+        }
+        else{
+            std::cout << "One or more of the output files is not open. Try running again" << std::endl;
+            return 1;
         }
     }
 
