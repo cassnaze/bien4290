@@ -41,6 +41,11 @@ float BigCass::Cluster::distance(float logData){
 }
 
 int main(int argc, char** argv){
+    
+    if(argc > 2 || argc < 2){
+        std:: cout << "WRONG number of arguments entered.. try again!" << std::endl;
+        return 1; 
+    }
 
     // Class instances that we need to use in this function 
     BigCass::statistics statsFunc;

@@ -158,12 +158,11 @@ int main(int argc, char** argv){
     }
 
     // Call our functions now
-    float meanRed = statsFunc.calcMean(&vector1, redSize);
-    float meanGreen = statsFunc.calcMean(&vector3, greenSize);;
-
-
     std::vector<float> subRed = vecFunc.sub(&vector1, redSize, &vector2, redSize);
     std::vector<float> subGreen = vecFunc.sub(&vector3, greenSize, &vector4, greenSize);
+
+    float meanRed = statsFunc.calcMean(&subRed, redSize);
+    float meanGreen = statsFunc.calcMean(&subGreen, greenSize);;
 
     std::vector<float> divRed = vecFunc.divConst(&subRed, redSize, meanRed);
     std::vector<float> divGreen = vecFunc.divConst(&subGreen, greenSize, meanGreen);;

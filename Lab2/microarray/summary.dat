@@ -1,63 +1,63 @@
 Time Point 0: 
 size is : 6118
-Sum of Means: 4.58248e-05
-Supressed Genes Mean: -0.0332724
-Stationary Genes Mean: 0.0525512
-Expressed Genes Mean: 0.144521
-Number of suppressed genes: 1805
-Number of stationary genes: 2725
-Number of expressed genes: 1588
+Sum of Means: 0
+Supressed Genes Mean: -0.0991385
+Stationary Genes Mean: -0.0131831
+Expressed Genes Mean: 0.0787717
+Number of suppressed genes: 1816
+Number of stationary genes: 2727
+Number of expressed genes: 1575
 Time Point 1: 
 size is : 6118
 Sum of Means: 0
-Supressed Genes Mean: -0.440414
-Stationary Genes Mean: 0.0216875
-Expressed Genes Mean: 0.33677
+Supressed Genes Mean: -0.504427
+Stationary Genes Mean: -0.0423256
+Expressed Genes Mean: 0.272756
 Number of suppressed genes: 694
 Number of stationary genes: 3719
 Number of expressed genes: 1705
 Time Point 2: 
 size is : 6118
 Sum of Means: 0
-Supressed Genes Mean: -0.233009
-Stationary Genes Mean: 0.0661362
-Expressed Genes Mean: 0.369697
-Number of suppressed genes: 1130
-Number of stationary genes: 3642
-Number of expressed genes: 1346
+Supressed Genes Mean: -0.307215
+Stationary Genes Mean: -0.00794142
+Expressed Genes Mean: 0.29642
+Number of suppressed genes: 1135
+Number of stationary genes: 3651
+Number of expressed genes: 1332
 Time Point 3: 
 size is : 6118
 Sum of Means: 0
-Supressed Genes Mean: -0.226354
-Stationary Genes Mean: 0.107094
-Expressed Genes Mean: 0.605078
+Supressed Genes Mean: -0.296211
+Stationary Genes Mean: 0.0372371
+Expressed Genes Mean: 0.535221
 Number of suppressed genes: 1652
 Number of stationary genes: 3773
 Number of expressed genes: 693
 Time Point 4: 
 size is : 6118
 Sum of Means: 0
-Supressed Genes Mean: -0.333036
-Stationary Genes Mean: 0.0846727
-Expressed Genes Mean: 0.74687
+Supressed Genes Mean: -0.376159
+Stationary Genes Mean: 0.0415508
+Expressed Genes Mean: 0.703748
 Number of suppressed genes: 1954
 Number of stationary genes: 3466
 Number of expressed genes: 698
 Time Point 5: 
 size is : 6118
 Sum of Means: 0
-Supressed Genes Mean: -0.273956
-Stationary Genes Mean: 0.0799577
-Expressed Genes Mean: 0.696614
+Supressed Genes Mean: -0.321588
+Stationary Genes Mean: 0.0323263
+Expressed Genes Mean: 0.648982
 Number of suppressed genes: 2008
 Number of stationary genes: 3486
 Number of expressed genes: 624
 Time Point 6: 
 size is : 6118
 Sum of Means: 0
-Supressed Genes Mean: -0.259091
-Stationary Genes Mean: 0.077716
-Expressed Genes Mean: 0.779896
+Supressed Genes Mean: -0.315259
+Stationary Genes Mean: 0.0215493
+Expressed Genes Mean: 0.723729
 Number of suppressed genes: 2350
 Number of stationary genes: 3261
 Number of expressed genes: 507

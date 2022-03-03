@@ -21,15 +21,15 @@ fi
 
 for i in {0..6}
 do
-    if grep -q ${geneName} suppressed_genes_${i}.txt
+    if grep ${geneName} suppressed_genes_${i}.txt
     then
         echo "Time Point ${i}: ${geneName} is suppressed."
 
-    elif grep -q ${geneName} stationary_genes_${i}.txt
+    elif grep ${geneName} stationary_genes_${i}.txt
     then
         echo "Time Point ${i}: ${geneName} is stationary."
 
-    elif grep -q ${geneName} expressed_genes_${i}.txt
+    elif grep ${geneName} expressed_genes_${i}.txt
     then
         echo "Time Point ${i}: ${geneName} is expressed."
     fi
