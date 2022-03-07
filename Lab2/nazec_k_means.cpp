@@ -5,6 +5,7 @@
 
 #include "nazec_k_means.hpp"
 #include "nazec_stats.hpp"
+#include <iomanip>
 //#include "nazec_pre_processing.hpp"
 
 //using namespace BigCass;
@@ -170,7 +171,7 @@ int main(int argc, char** argv){
 
     }
 
-    // Output the final cluster means
+    // Output the final cluster means // << std::scientific << std::setprecision(5)
     std:: cout << "Sum of Means: "<< sumMeans << std::endl;
     std:: cout << "Supressed Genes Mean: "<< meanSup << std::endl;
     std:: cout << "Stationary Genes Mean: "<< meanStat << std::endl;

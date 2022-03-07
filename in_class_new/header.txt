@@ -1,0 +1,6 @@
+float GabeTheBabeCorr::CorrelationHehe::correlationCalc(std::vector <float> *data1, std::vector <float> *data2, int n)
+GabeTheBabeCorr
+GabeTheBabe
+Class name: CorrelationHehe
+StatsBrostatsData
+Class name: 
