@@ -7,7 +7,7 @@ valley_of_plenty.o: valley_of_plenty.cpp valley_of_plenty.hpp
 wolf.o: wolf.cpp wolf.hpp
 	$(CC) -c $^
 dandelion.o: toss_a_coin.o valley_of_plenty.o wolf.o
-	$(CC) -c  $^
+	$(CC) -c /lab/bien4290/midterm2022/Simple $^
 clean:
 	rm -f *.o
 all: dandelion.o toss_a_coin.o valley_of_plenty.o wolf.o

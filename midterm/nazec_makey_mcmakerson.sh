@@ -5,7 +5,7 @@
 # Create a makefile
 # Script will take in a path to a directory with code files as an argument
 
-# Path for the test data /lab/bien4290/midterm2022
+# Path for the test data /lab/bien4290/midterm2022/...
 
 if [ "./midterm/makefile" ]
     then
@@ -15,17 +15,16 @@ else
 fi
 
 # Check to see that this gets pushed and it worked hehe
+    # This will also not change regardless of what the rest does
 echo "# This is the makefile created for the midterm" > makefile
 echo "CC = g++" >> makefile
 
+# For the first trial of getting this done, I got stuck with input file stuff so I hardcored in some files
+# I think the logic would be similar but able to be used for an arbitrary amount of vals with making targets
 
 # 1. Generate separate targets for each cpp file in the directory
     # nazec_stats.o: nazec_stats.cpp nazec_stats.hpp
 	# $(CC) -c $^
-
-# File input from the command line -> couldnt get this to work at first but would need for later
-#file=$1
-#echo $file
 
 # Hardcoding the files to my dir to be able to get something working
 #cp -r /lab/bien4290/midterm2022/Straightforward/. /home/nazec/bien4290/midterm/
@@ -56,9 +55,27 @@ echo "$mainFile.o: ${noRepeats[1]}.o ${noRepeats[2]}.o ${noRepeats[3]}.o" >> mak
 echo "	\$(CC) -c $@ $^" >> makefile
 
 # 3. Generate a "clean" target that removes all relevant compilation files
+    # This should be correct regardlesss of the if the rest is hardcoded
 echo "clean:" >> makefile
 echo "	rm -f *.o" >> makefile
 
 # 4. Perform a make all and run the exe
 #make all
 echo "all: $mainFile.o ${noRepeats[1]}.o ${noRepeats[2]}.o ${noRepeats[3]}.o" >> makefile
+
+
+# -----------------------------------------------
+# This is how we would do it from input argument
+# File input from the command line -> couldnt get this to work at first
+cd "$1"
+echo "New path is: '$(pwd)'" 
+
+# Ok so this part makes an array from the path that is input in the command
+readarray -t letsMakeThisWork < <(ls -l | grep ".cpp" | sed 's/[^ ]*[ ]//g' )
+echo $letsMakeThisWork
+
+readarray -t removeCPP < <(ls -l | grep ".cpp" | sed 's/[^ ]*[ ]//g' | sed 's/.cpp//g' )
+echo ${removeCPP}
+
+findMain=$( ls -l | grep ".cpp" | grep -Fr "main" | cut -d ":" -f 1 | grep ".cpp" | sed 's/.cpp//g' )
+echo $findMain
