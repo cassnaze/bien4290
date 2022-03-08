@@ -23,7 +23,7 @@ echo "CC = g++" >> makefile
     # nazec_stats.o: nazec_stats.cpp nazec_stats.hpp
 	# $(CC) -c $^
 
-# File input from the command line
+# File input from the command line -> couldnt get this to work at first but would need for later
 #file=$1
 #echo $file
 
@@ -36,12 +36,12 @@ readarray -t help < <(ls -l | grep ".cpp" | sed 's/[^ ]*[ ]//g')
 
 readarray -t noRepeats < <(ls -l | grep ".cpp" | sed 's/[^ ]*[ ]//g' | sed 's/.cpp//g' )
 # echo $noRepeats
-num=${#noRepeats[@]}
 
-#for i in "${noRepeats[@]}"
+#for i in "${noRepeats[@]}" # Tried to use this to iterate through the num of elements in the array
 for i in {1..3}
 do
     echo ${noRepeats[$i]}.o: ${noRepeats[$i]}.cpp ${noRepeats[$i]}.hpp >> makefile
+    echo "	\$(CC) -c $^" >> makefile
 done
 
 # 2. Generate and "all" target which consists of each of the above targets and makes exe
@@ -49,12 +49,16 @@ done
     # exe must be the name of the folder with the files
     #grep -Fr "main"
 
-mainFile=$( ls -l | grep ".cpp" | grep -Fr "main" | cut -d ":" -f 1 | grep ".cpp" )
-echo $mainFile
+mainFile=$( ls -l | grep ".cpp" | grep -Fr "main" | cut -d ":" -f 1 | grep ".cpp" | sed 's/.cpp//g' )
+#echo $mainFile
+
+echo "$mainFile.o: ${noRepeats[1]}.o ${noRepeats[2]}.o ${noRepeats[3]}.o" >> makefile
+echo "	\$(CC) -c $@ $^" >> makefile
 
 # 3. Generate a "clean" target that removes all relevant compilation files
+echo "clean:" >> makefile
+echo "	rm -f *.o" >> makefile
 
 # 4. Perform a make all and run the exe
 #make all
-
-
+echo "all: $mainFile.o ${noRepeats[1]}.o ${noRepeats[2]}.o ${noRepeats[3]}.o" >> makefile
