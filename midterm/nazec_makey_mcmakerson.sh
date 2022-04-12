@@ -51,8 +51,8 @@ done
 mainFile=$( ls -l | grep ".cpp" | grep -Fr "main" | cut -d ":" -f 1 | grep ".cpp" | sed 's/.cpp//g' )
 #echo $mainFile
 
-echo "$mainFile.o: ${noRepeats[1]}.o ${noRepeats[2]}.o ${noRepeats[3]}.o" >> makefile
-echo "	\$(CC) -c $@ $^" >> makefile
+echo "$mainFile.o: ${noRepeats[1]}.o ${noRepeats[3]}.o" >> makefile
+echo "	\$(CC) -c \$@ $^" >> makefile
 
 # 3. Generate a "clean" target that removes all relevant compilation files
     # This should be correct regardlesss of the if the rest is hardcoded
@@ -62,7 +62,6 @@ echo "	rm -f *.o" >> makefile
 # 4. Perform a make all and run the exe
 #make all
 echo "all: $mainFile.o ${noRepeats[1]}.o ${noRepeats[2]}.o ${noRepeats[3]}.o" >> makefile
-
 
 # -----------------------------------------------
 # This is how we would do it from input argument

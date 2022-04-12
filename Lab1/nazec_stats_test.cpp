@@ -74,15 +74,5 @@ int main(int argc, char** argv){
     }
     std::cout << "Each * represents 50 data points" << std::endl;
 
-/*  // Tried to use this code from online to print it vertically rather than horizontal but the logic doesnt make sense
-    for (int value : histo) std::cout << ' ' << value;
-    std::cout << std::endl;
-    max = 0;
-    for (int value : histo) if (max < value) max = value;
-    for (; max > 0; --max) {
-        for (int value : histo) std::cout << (value >= max ? " *" : "  ");
-        std::cout << std::endl;
-  }
-*/
 
 }
