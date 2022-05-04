@@ -1,13 +1,12 @@
 # This is the makefile created for the midterm
 CC = g++
-toss_a_coin.o: toss_a_coin.cpp toss_a_coin.hpp
+brennanb_corr.o:brennanb_corr.cpp brennanb_corr.hpp
 	$(CC) -c $^
-valley_of_plenty.o: valley_of_plenty.cpp valley_of_plenty.hpp
+brennanb_stats.o:brennanb_stats.cpp brennanb_stats.hpp
 	$(CC) -c $^
-wolf.o: wolf.cpp wolf.hpp
-	$(CC) -c $^
-dandelion.o: toss_a_coin.o wolf.o
+Simple.o:brennanb_corr.o brennanb_stats.o
 	$(CC) -c $@ $^
+all:Simple.o
 clean:
 	rm -f *.o
-all: dandelion.o toss_a_coin.o valley_of_plenty.o wolf.o
+	rm -f *.gch
